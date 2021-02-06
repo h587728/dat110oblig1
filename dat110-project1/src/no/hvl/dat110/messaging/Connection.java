@@ -28,9 +28,14 @@ public class Connection {
 			System.out.println("Connection: " + ex.getMessage());
 			ex.printStackTrace();
 		}
+<<<<<<< Updated upstream
 	}
 
 	// Fred testy test
+=======
+
+	}
+>>>>>>> Stashed changes
 
 	public void send(Message message) {
 
@@ -43,16 +48,37 @@ public class Connection {
 
 	public Message receive() {
 
+<<<<<<< Updated upstream
 		Message message;
 		byte[] recvbuf;
+=======
+		Message message = new Message();
+		byte[] recvbuf = new byte[128];
+
+		try {
+			inStream.read(recvbuf);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		message.decapsulate(recvbuf);
+>>>>>>> Stashed changes
 
 		// TODO
 		// read a segment (128 bytes) from the input stream and decapsulate into message
 		// Hint: create a new Message object and use the decapsulate method
+<<<<<<< Updated upstream
 		
 		if (true) {
 			throw new RuntimeException("not yet implemented");
 		}
+=======
+
+		/*
+		 * if (true) { throw new RuntimeException("not yet implemented");
+		 * 
+		 * }
+		 */
+>>>>>>> Stashed changes
 
 		return message;
 
